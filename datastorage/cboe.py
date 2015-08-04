@@ -20,9 +20,10 @@ import numpy as np
 import matplotlib.pylab as plt
 import seaborn as sns
 
-__location__ = os.path.realpath(os.path.join(os.getcwd(),
-                                os.path.dirname(__file__)))
-path = os.path.join(__location__, '../CBOE/data/')
+path = os.getenv("HOME") + '/Dropbox/Research/data/CBOE/data/'
+#__location__ = os.path.realpath(os.path.join(os.getcwd(),
+#                                os.path.dirname(__file__)))
+#path = os.path.join(__location__, path + 'CBOE/data/')
 
 
 def download_vix_data():
@@ -40,7 +41,7 @@ def process_vix_data():
     """
     xl = pd.ExcelFile(path + 'dailypricehistory.xls')
     # Parse first sheet
-    raw = xl.parse('Daily', skiprows=range(4))
+    raw = xl.parse('Daily', skiprows=range(5))
     # Rename date column
     raw.rename(columns={raw.columns[0]: 'date'}, inplace=True)
     for name in raw.columns[1:]:
@@ -68,6 +69,7 @@ def load_vix_spx():
 
 
 if __name__ == '__main__':
+
     download_vix_data()
     process_vix_data()
     load_vix_spx()

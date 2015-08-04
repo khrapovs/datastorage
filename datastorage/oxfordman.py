@@ -29,9 +29,10 @@ import datetime as dt
 import matplotlib.pylab as plt
 import seaborn as sns
 
-__location__ = os.path.realpath(os.path.join(os.getcwd(),
-                                os.path.dirname(__file__)))
-path = os.path.join(__location__, '../OxfordMan/data/')
+path = os.getenv("HOME") + '/Dropbox/Research/data/OxfordMan/data/'
+# __location__ = os.path.realpath(os.path.join(os.getcwd(),
+#                                os.path.dirname(__file__)))
+# path = os.path.join(__location__, 'OxfordMan/data/')
 
 
 def convert_dates(string):
@@ -113,6 +114,7 @@ def load_realized_vol():
 
 
 if __name__ == '__main__':
+
     download_rv_data()
     process_rv_data()
     load_realized_vol()

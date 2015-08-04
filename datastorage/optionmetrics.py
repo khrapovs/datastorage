@@ -17,10 +17,10 @@ from scipy.interpolate import interp1d
 from impvol import lfmoneyness, delta, vega
 from datastorage.quandl import load_spx
 
-
-__location__ = os.path.realpath(os.path.join(os.getcwd(),
-                                os.path.dirname(__file__)))
-path = os.path.join(__location__, '../OptionMetrics/data/')
+path = os.getenv("HOME") + '/Dropbox/Research/data/OptionMetrics/data/'
+# __location__ = os.path.realpath(os.path.join(os.getcwd(),
+#                                 os.path.dirname(__file__)))
+# path = os.path.join(__location__, path + 'OptionMetrics/data/')
 
 
 def convert_dates(string):

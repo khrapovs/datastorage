@@ -16,10 +16,10 @@ import pandas as pd
 import datetime as dt
 import numpy as np
 
-
-__location__ = os.path.realpath(os.path.join(os.getcwd(),
-                                os.path.dirname(__file__)))
-path = os.path.join(__location__, '../CRSP/data/')
+path = os.getenv("HOME") + '/Dropbox/Research/data/CRSP/data/'
+# __location__ = os.path.realpath(os.path.join(os.getcwd(),
+#                                 os.path.dirname(__file__)))
+# path = os.path.join(__location__, path + 'CRSP/data/')
 
 
 def convert_dates(string):

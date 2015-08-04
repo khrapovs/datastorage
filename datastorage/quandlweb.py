@@ -17,9 +17,10 @@ import seaborn as sns
 
 __all__ = ['import_spx', 'load_spx']
 
+path = os.getenv("HOME") + '/Dropbox/Research/data/Quandl/data/'
 __location__ = os.path.realpath(os.path.join(os.getcwd(),
                                 os.path.dirname(__file__)))
-path = os.path.join(__location__, '../Quandl/data/')
+# path = os.path.join(__location__, path + 'Quandl/data/')
 
 
 def import_spx(plot=False):
@@ -122,6 +123,7 @@ def load_ff_factors_a():
 
 
 if __name__ == '__main__':
+
     import_ff_factors_a()
     load_ff_factors_a()
     import_spx()

@@ -14,9 +14,10 @@ import pandas as pd
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-__location__ = os.path.realpath(os.path.join(os.getcwd(),
-                                os.path.dirname(__file__)))
-path = os.path.join(__location__, '../Compustat/data/')
+path = os.getenv("HOME") + '/Dropbox/Research/data/Compustat/data/'
+# __location__ = os.path.realpath(os.path.join(os.getcwd(),
+#                                 os.path.dirname(__file__)))
+# path = os.path.join(__location__, path + 'Compustat/data/')
 
 
 def date_convert(string):
