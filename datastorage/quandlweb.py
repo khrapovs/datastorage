@@ -10,7 +10,7 @@ import os
 
 import Quandl as ql
 import pandas as pd
-import pandas.io.data as web
+import pandas_datareader.data as web
 import matplotlib.pylab as plt
 import seaborn as sns
 

@@ -15,7 +15,7 @@ import datetime as dt
 from scipy.interpolate import interp1d
 
 from impvol import lfmoneyness, delta, vega
-from datastorage.quandl import load_spx
+from datastorage.quandlweb import load_spx
 
 path = os.getenv("HOME") + '/Dropbox/Research/data/OptionMetrics/data/'
 # __location__ = os.path.realpath(os.path.join(os.getcwd(),
